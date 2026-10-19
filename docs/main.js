@@ -6,7 +6,7 @@ const PULSE_MS = 300;
 function visitorSystem() {
   const platform = navigator.userAgentData?.platform || navigator.platform || '';
   const agent = navigator.userAgent || '';
-  // iPadOS reports itself as a Mac; it has a touch screen and no ClickShift for macOS.
+  // iPadOS reports itself as a Mac; it has a touch screen and no CogShift for macOS.
   if (/iPhone|iPad|iPod|Android/i.test(agent) || (/Mac/i.test(platform) && navigator.maxTouchPoints > 1)) {
     return 'phone';
   }
